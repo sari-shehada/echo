@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 final lightTheme = ThemeData(
+  //TODO: Replace with manual font loading and remove GoogleFonts dependency
+  fontFamily: GoogleFonts.inter().fontFamily,
   colorScheme: ColorScheme(
     brightness: Brightness.light,
     primary: Color(0xFFF39177),

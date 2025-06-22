@@ -27,7 +27,7 @@ class LandingNavigationFeature {
         false;
   }
 
-  static void setFinishedLanding() async {
+  void setFinishedLanding() async {
     await SharedPreferencesService.instance.setValue(
       key: _kSharedPreferencesKey,
       value: true,

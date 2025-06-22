@@ -1,4 +1,6 @@
 import 'package:bluetooth_chat/features/landing_navigation/landing_navigation_feature.dart';
+import 'package:bluetooth_chat/ui/pages/landing/landing_controller.dart';
+import 'package:bluetooth_chat/ui/pages/landing/landing_page.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences_service/shared_preferences_service.dart';
 
@@ -19,7 +21,7 @@ class LoaderController extends GetxController {
 
   void _navigateUser() {
     if (LandingNavigationFeature.instance.shouldNavigateToLanding) {
-      //TODO: Navigate to landing page
+      Get.offAll(() => LandingPage(), binding: LandingBinding());
       return;
     }
     //TODO: Navigate to home page
